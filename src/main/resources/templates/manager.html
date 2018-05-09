@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    内容：<input type="text" id="content">
+    <input type="button" value="发布内容" onclick="sub()">
+
+
+
+</body>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    function sub() {
+        var content=$("#content").val();
+        $.ajax({
+            url:"manager",
+            data:{"content":content},
+            success:function (data) {
+               alert(success);
+            }
+        })
+
+    }
+
+
+</script>
+
+
+
+
+</html>
